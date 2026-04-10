@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD ASIF FOYSAL</title>
+
+  <style>
+    :root {
+      --primary: #6366f1;
+      --secondary: #22d3ee;
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:20px 10%; position:sticky; top:0;
+      background:rgba(15,23,42,0.9);
+      backdrop-filter: blur(10px);
+      z-index:1000;
+    }
+
+    nav a {
+      margin-left:20px; text-decoration:none; color:var(--text);
+      position:relative;
+    }
+
+    nav a::after {
+      content:""; position:absolute; width:0; height:2px;
+      background:var(--secondary); left:0; bottom:-5px;
+      transition:0.3s;
+    }
+
+    nav a:hover::after { width:100%; }
+
+    section { padding:80px 10%; }
+
+    h2 { color:var(--secondary); margin-bottom:20px; }
+
+    .hero { text-align:center; padding:120px 10% 60px; }
+
+    .typing { color: var(--primary); font-weight:bold; }
+
+    .skills-list { display:flex; flex-wrap:wrap; gap:10px; }
+
+    .skill {
+      background:var(--card); padding:10px 15px; border-radius:20px;
+      transition:0.3s;
+    }
+
+    .skill:hover { transform:scale(1.1); background:var(--primary); }
+
+    /* EXPERIENCE TIMELINE */
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+      padding-left: 30px;
+      border-left: 2px solid var(--secondary);
+    }
+
+    .timeline-item {
+      margin-bottom: 30px;
+      position: relative;
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+
+    .company {
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .date {
+      font-size: 0.9em;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display:block;
+    }
+
+    .filter-buttons { margin-bottom:20px; }
+
+    .filter-buttons button {
+      margin-right:10px; padding:8px 15px; border:none;
+      background:var(--card); color:var(--text); cursor:pointer;
+      border-radius:5px; transition:0.3s;
+    }
+
+    .filter-buttons button:hover { background:var(--primary); }
+
+    .projects-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .project {
+      background:var(--card); padding:20px; border-radius:10px;
+      transition:0.3s;
+    }
+
+    .project:hover {
+      transform:translateY(-5px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    form { display:flex; flex-direction:column; gap:10px; max-width:400px; }
+
+    input, textarea {
+      padding:10px; border:none; border-radius:5px;
+      background:var(--card); color:var(--text);
+    }
+
+    button.submit {
+      background:var(--primary); border:none; padding:10px;
+      color:white; cursor:pointer; transition:0.3s;
+    }
+
+    button.submit:hover { background:var(--secondary); }
+
+    footer { text-align:center; padding:20px; color:var(--muted); }
+
+    @media(max-width:768px){ header { flex-direction:column; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MD ASIF FOYSAL</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#my_contact">My Contact</a>
+    <a href="#contact_us">Contact US</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Hello, I'm a MD Asif Foysal <span class="typing"></span></h2>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I build modern, responsive, and interactive websites.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-list">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span class="date">2026 - Present</span>
+      <h3>Web Developer Intern [Frontend]</h3>
+      <span class="company">Syntecxhub</span>
+      <p>● Developed and maintained responsive user interfaces using HTML, CSS, and JavaScript.</p>
+      <p>● Built reusable components and scalable front-end architecture using frameworks such as React / Vue / Angular.</p>
+      <p>● Optimized web applications for maximum speed, performance, and cross-browser compatibility.</p>
+      <p>● Debugged and resolved UI issues, improving overall user experience.</p>
+      <p>● Implemented version control using Git and participated in code reviews.</p>
+      <p>● Wrote clean, maintainable, and well-documented code.</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="date">Winter - 2026</span>
+      <h3>Lead Monitor</h3>
+      <span class="company">Live-in-Field Experience (LFE) Program | IUB</span>
+      <p>● Supervise and guide students and monitors.</p>
+      <p>● Coordinate between student, faculty, venue management and local community.</p>
+      <p>● Ensure monitor's work properly and timely task completion.</p>
+      <p>● Handle field issues and support teamwork and discipline.</p>
+      <p>● Manage logistics like schedule, accommodation, and movement.</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="date">Summer - 2025</span>
+      <h3>Monitor</h3>
+      <span class="company">Live-in-Field Experience (LFE) Program | IUB</span>
+      <p>● Supervise students in the field, ensuring discipline, safety, and active participation.</p>
+      <p>● Coordinate between students and faculty.</p>
+      <p>● Assist with data collection, observation, and documentation.</p>
+      
+    </div>
+
+    <div class="timeline-item">
+      <span class="date">2020 - 2021</span>
+      <h3>Office Assistent</h3>
+      <span class="company">Bangladesh Organic Products Manufacturers Association</span>
+      <p>● Handled administrative tasks including communication, data entry, document management, record keeping, and generaloffice support.</p>
+      <p>● Supported daily office operations through document preparation, filing, and mail management.</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="date">2016 - 2018</span>
+      <h3>Cadet Corporal</h3>
+      <span class="company">Bangladesh National Cadet Core (BNCC)</span>
+      <p>● Led and supervised a squad of cadets during training exercises and parades.</p>
+      <p>● Maintained discipline, punctuality, and uniform standards within the unit.</p>
+      <p>● Assisted senior officers in organizing drills, physical training, and ceremonial duties.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="filter-buttons">
+    <!-- <button onclick="filterProjects('all')">All</button> -->
+    <button onclick="filterProjects('web')">Web</button>
+    <!-- <button onclick="filterProjects('app')">App</button> -->
+  </div>
+
+  <div class="projects-grid">
+    <div class="project" data-category="web">
+      <h3>Website</h3>
+      <p>Responsive website project.</p>
+    </div>
+
+    <!-- <div class="project" data-category="app"> -->
+      <!-- <h3>App</h3> -->
+      <!-- <p>Simple app interface.</p> -->
+    <!-- </div> -->
+  <!-- </div> -->
+</section>
+
+<section id="my_contacts" class="contact">
+  <h2>Contact</h2>
+  <p>Email: md.asiffoysal47@email.com</p>
+  <p>Mobile: +8801786926901</p>
+  <p>Linked: <a target="_blank" href="https://www.linkin.com/in/md-asif-foysal">MD Asif Foysal</a></p>
+  <p>Facebook: <a target="_blank" href="https://www.facebook.com/asiffoysalplabon">Asif Foysal Plabon</a></p>
+  <p>Instagram: <a target="_blank" href="https://www.instagram.com/pla6on">Asif Foysal Plabon</a></p>
+</section>
+
+<section id="contact_us">
+  <h2>Contact</h2>
+
+  <form onsubmit="sendEmail(event)">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Message" required></textarea>
+    <button class="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 My Portfolio</p>
+</footer>
+
+<script>
+  // Typing effect
+  const text = ["Developer", "Designer", "Creator"];
+  let i = 0, j = 0, current = "", isDeleting = false;
+
+  function type() {
+    current = text[i];
+    document.querySelector(".typing").textContent = current.substring(0, j);
+
+    if (!isDeleting && j < current.length) j++;
+    else if (isDeleting && j > 0) j--;
+    else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) i = (i + 1) % text.length;
+    }
+
+    setTimeout(type, isDeleting ? 50 : 100);
+  }
+
+  type();
+
+  function filterProjects(category) {
+    document.querySelectorAll(".project").forEach(p => {
+      if (category === 'all' || p.dataset.category === category) {
+        p.style.display = "block";
+      } else {
+        p.style.display = "none";
+      }
+    });
+  }
+
+  function sendEmail(e) {
+    e.preventDefault();
+    alert("Message sent! (Demo)");
+  }
+</script>
+
+</body>
+</html>
